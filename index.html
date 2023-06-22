@@ -1,0 +1,7 @@
+<script>
+  let { lang, code } = Object.fromEntries(location.hash.slice(3).split('&').map(s => s.split('=')));
+  let tioURL = `https://tio.run/%23${lang}%23&code=${btoa(encodeURIComponent(code))}`;
+  window.open(tioURL);
+</script>
+
+<noscript>Javascript is required</noscript>
